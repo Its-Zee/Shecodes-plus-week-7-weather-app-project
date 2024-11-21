@@ -31,35 +31,32 @@
       </header>
       <main>
         <h1 class="current-city" id="current-city"></h1>
-        <p class="current-details">16:30, Wednesday 20 November 2024</p>
+        <p class="current-details" id="time"></p>
         <div class="current-temperature-container">
           <div class="temperature-icon">⛅</div>
           <div class="temperature-value" id="temperature"></div>
           <div class="temperature-unit">°C</div>
         </div>
         <div class="condition">
-          Now: <span class="description1">Cloudy</span> |
-          <span class="description2">Feels like 30</span>
-          <span class="temperature-unit">°C</span>
+          Now: <span class="description" id="description"></span>
         </div>
 
         <div class="current-conditions-container">
-          <div class="time">
-            <strong> 17:35 </strong> <br />
-            Time
+          <div class="feel">
+            Feels like: <br />
+            <strong id="feel"> </strong> 
           </div>
           <div class="humidity">
-            <strong> 83% </strong> <br />
-            Humidity
+            Humidity: <br />
+            <strong id="humidity"> </strong> 
           </div>
           <div class="wind">
-            <strong> 7.1km/h </strong> <br />
-            Wind
+            Wind: <br />
+            <strong id="wind"> </strong>
           </div>
           <div class="pressure">
-            <strong> 989 </strong> <br />
-            Pressure
-          </div>
+            Pressure: <br />
+            <strong id="pressure"></strong>
         </div>
       </main>
 
