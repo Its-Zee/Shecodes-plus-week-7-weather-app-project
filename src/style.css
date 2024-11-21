@@ -1,7 +1,7 @@
 body {
   background: linear-gradient(
     100.5deg,
-    rgb(148, 146, 236) 17.7%,
+    rgb(165, 164, 235) 17.7%,
     rgb(245, 194, 194) 76.1%
   );
   font-family: "Roboto", serif;
@@ -9,9 +9,133 @@ body {
 
 .weather-app {
   background-color: white;
-  max-width: 800px;
-  margin: 45px auto;
-  padding: 30px;
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(53, 43, 61, 0.6);
+  box-shadow: 0 20px 30px rgba(53, 43, 61, 0.6);
+}
+
+header {
+  border-bottom: 1px solid rgba(73, 73, 72, 0.205);
+  padding: 0 0 15px 0;
+}
+
+.search-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 5px;
+  width: 75%;
+  margin: 10px 10px;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #b28de9;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.current-city {
+  font-size: 35px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.current-details {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+  color: rgb(82, 81, 81);
+  text-align: center;
+}
+
+.current-temperature-container {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  padding: 5px;
+}
+
+.temperature-icon {
+  font-size: 40px;
+  margin: 5px 5px 0 0;
+}
+
+.temperature-value {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.temperature-unit {
+  font-size: 20px;
+}
+
+.current-conditions-container {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(82, 81, 81);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.humidity {
+  line-height: 18px;
+  padding: 15px 30px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(166, 155, 175, 0.6);
+  max-width: 100px;
+  transition: all 200ms;
+}
+
+.humidity:hover {
+  color: black;
+  background-color: #f9f7fe;
+  cursor: pointer;
+}
+
+.wind {
+  line-height: 18px;
+  padding: 15px 30px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(166, 155, 175, 0.6);
+  max-width: 100px;
+  transition: all 200ms;
+}
+.wind:hover {
+  color: black;
+  background-color: #f9f7fe;
+  cursor: pointer;
+}
+
+.current-conditions-container strong {
+  color: blueviolet;
+}
+
+footer {
+  border-top: 1px solid rgba(68, 68, 67, 0.205);
+  padding: 25px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(82, 81, 81);
+}
+
+a {
+  color: blueviolet;
 }
