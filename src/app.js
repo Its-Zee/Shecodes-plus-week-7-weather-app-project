@@ -5,7 +5,7 @@ function refreshWeather(response) {
   let cityName = response.data.city;
   let country = response.data.country;
   currentTemperature.innerHTML = Math.round(temperature);
-  currentCity.innerHTML = `${cityName} , ${country}`;
+  currentCity.innerHTML = `${cityName}, ${country}`;
 }
 
 function searchCity(city) {
