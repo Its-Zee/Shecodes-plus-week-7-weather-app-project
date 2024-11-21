@@ -30,17 +30,24 @@
         </form>
       </header>
       <main>
-        <h1 class="current-city" id="current-city">
-          Johannesburg, South Africa
-        </h1>
+        <h1 class="current-city" id="current-city"></h1>
         <p class="current-details">16:30, Wednesday 20 November 2024</p>
         <div class="current-temperature-container">
           <div class="temperature-icon">⛅</div>
-          <div class="temperature-value">25</div>
+          <div class="temperature-value" id="temperature"></div>
           <div class="temperature-unit">°C</div>
+        </div>
+        <div class="condition">
+          <span class="description1">Cloudy</span> |
+          <span class="description2">Feels like 30</span>
+          <span class="temperature-unit">°C</span>
         </div>
 
         <div class="current-conditions-container">
+          <div class="time">
+            <strong> 17:35 </strong> <br />
+            Time
+          </div>
           <div class="humidity">
             <strong> 83% </strong> <br />
             Humidity
@@ -48,6 +55,10 @@
           <div class="wind">
             <strong> 7.1km/h </strong> <br />
             Wind
+          </div>
+          <div class="pressure">
+            <strong> 989 </strong> <br />
+            Pressure
           </div>
         </div>
       </main>
