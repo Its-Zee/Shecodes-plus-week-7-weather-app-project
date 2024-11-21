@@ -1,11 +1,80 @@
 function refreshWeather(response) {
+  //API to change the temperature to live data
   let currentTemperature = document.querySelector("#temperature");
   let currentCity = document.querySelector("#current-city");
   let temperature = response.data.temperature.current;
+  currentTemperature.innerHTML = Math.round(temperature);
+
+  //API to change the name of the city and country
   let cityName = response.data.city;
   let country = response.data.country;
-  currentTemperature.innerHTML = Math.round(temperature);
   currentCity.innerHTML = `${cityName}, ${country}`;
+
+  //lesson8: adding the weather data
+  //API to update the weather condition
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  //Update the feelLIke, humidity, wind and pressure data
+  let feelElement = document.querySelector("#feel");
+  let feel = response.data.temperature.feels_like;
+  feelElement.innerHTML = `${Math.round(feel)} °C`;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity} % `;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+  let pressureElement = document.querySelector("#pressure");
+  pressureElement.innerHTML = `${response.data.temperature.pressure} mb`;
+  //update the time and date
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  timeElement.innerHTML = formatDate(date);
+}
+
+function formatDate(date) {
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let day = weekDays[date.getDay()];
+  let currentDate = date.getDate();
+  let currentMonth = months[date.getMonth()];
+  let year = date.getFullYear();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  if (currentDate < 10) {
+    currentDate = `0${currentDate}`;
+  }
+
+  return `${hours}:${minutes}, ${day} ${currentDate} ${currentMonth} ${year}`;
 }
 
 function searchCity(city) {
@@ -15,6 +84,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(refreshWeather);
 }
 
+//lesson 6: search engine
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
