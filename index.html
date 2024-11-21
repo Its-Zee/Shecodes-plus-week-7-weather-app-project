@@ -17,25 +17,27 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
-        <h1 class="current-city">Johannesburg, South Africa</h1>
+        <h1 class="current-city" id="current-city">
+          Johannesburg, South Africa
+        </h1>
         <p class="current-details">16:30, Wednesday 20 November 2024</p>
         <div class="current-temperature-container">
           <div class="temperature-icon">⛅</div>
           <div class="temperature-value">25</div>
           <div class="temperature-unit">°C</div>
         </div>
-        
 
         <div class="current-conditions-container">
           <div class="humidity">
@@ -68,5 +70,6 @@
         >
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
