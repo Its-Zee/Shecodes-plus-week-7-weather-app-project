@@ -29,9 +29,9 @@ function refreshWeather(response) {
   //lesson 8 update the time and date and icon image
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  let iconImage = document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
   timeElement.innerHTML = formatDate(date);
-  iconImage.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" >`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" >`;
 }
 
 function formatDate(date) {
