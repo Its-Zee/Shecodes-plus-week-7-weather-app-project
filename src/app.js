@@ -18,17 +18,20 @@ function refreshWeather(response) {
   //Update the feelLIke, humidity, wind and pressure data
   let feelElement = document.querySelector("#feel");
   let feel = response.data.temperature.feels_like;
-  feelElement.innerHTML = `${Math.round(feel)} °C`;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${response.data.temperature.humidity} % `;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${response.data.wind.speed} km/h`;
   let pressureElement = document.querySelector("#pressure");
+  feelElement.innerHTML = `${Math.round(feel)} °C`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity} % `;
+  windElement.innerHTML = `${response.data.wind.speed} km/h`;
   pressureElement.innerHTML = `${response.data.temperature.pressure} mb`;
-  //update the time and date
+
+  //lesson 8 update the time and date and icon image
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconImage = document.querySelector("#icon");
   timeElement.innerHTML = formatDate(date);
+  iconImage.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" >`;
 }
 
 function formatDate(date) {

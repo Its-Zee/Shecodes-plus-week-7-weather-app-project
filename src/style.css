@@ -1,7 +1,7 @@
 body {
   background: linear-gradient(
     100.5deg,
-    rgb(165, 164, 235) 17.7%,
+    rgb(154, 153, 235) 17.7%,
     rgb(245, 194, 194) 76.1%
   );
   font-family: "Roboto", serif;
@@ -9,7 +9,7 @@ body {
 
 .weather-app {
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.9;
   max-width: 600px;
   margin: 35px auto;
   padding: 20px;
@@ -30,7 +30,7 @@ header {
   padding: 15px 20px;
 }
 .search-input {
-  background-color: #f9f7fe;
+  background-color: #f4f4f5;
   width: 75%;
   margin: 10px 10px;
 }
@@ -63,23 +63,25 @@ main {
 
 .current-temperature-container {
   display: flex;
-  margin: 20px auto;
+  margin: 10px auto;
   justify-content: center;
-  padding: 5px;
+  padding: 2px;
 }
 
 .temperature-icon {
-  font-size: 40px;
-  margin: 5px 5px 0 0;
+  width: 90px;
+  height: 90px;
 }
 
 .temperature-value {
   font-size: 50px;
+  line-height: 100px;
   font-weight: bold;
 }
 
 .temperature-unit {
-  font-size: 18px;
+  font-size: 25px;
+  margin-top: 30px;
 }
 
 .condition {
